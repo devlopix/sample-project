@@ -4,21 +4,21 @@ stages {
 stage ('Compile Stage') {
 steps {
 withMaven(maven : 'Maven3.6') {
-bat'mvn clean compile'
+sh 'mvn clean compile'
 }
 }
 }
 stage ('Testing Stage') {
 steps {
 withMaven(maven : 'Maven3.6') {
-bat'mvn test'
+sh 'mvn test'
 }
 }
 }
 stage ('Install Stage') {
 steps {
 withMaven(maven : 'Maven3.6') {
-bat'mvn install'
+sh 'mvn install'
 }
 }
 }
