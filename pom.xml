@@ -22,8 +22,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.compiler.source>1.8</project.compiler.source>
-		<project.compiler.target>1.8</project.compiler.target>
+		<project.compiler.source>11</project.compiler.source>
+		<project.compiler.target>11</project.compiler.target>
 	</properties>
 
 	<dependencies>
