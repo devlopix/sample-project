@@ -27,5 +27,14 @@ pipeline {
                     sh 'mvn install'
             }
         }
+        stage ('Email'){
+        steps{
+         emailext (to: 'othmane.devlopix@gmail.com', replyTo: 'othmane.devlopix@gmail.com', 
+         subject: "Email Report from - '${env.JOB_NAME}' ", 
+         body: readFile("target/surefire-reports/emailable-report.html"), 
+         mimeType: 'text/html');
+    }
+    }
+        
     }
 }
