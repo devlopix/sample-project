@@ -34,7 +34,7 @@ pipeline {
         steps{
          emailext (to: 'othmane.devlopix@gmail.com', replyTo: 'othmane.devlopix@gmail.com', 
          subject: "Email Report from - '${env.JOB_NAME}' ", 
-         body: readFile("target/surefire-reports/TEST-ma.gr.sample_project.AppTest.xml"), 
+         body: readFile("target/site/surefire-report.html"), 
          mimeType: 'text/html');
     }
     }
